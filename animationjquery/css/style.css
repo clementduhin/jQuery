@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap");
+
+.panneaux {
+  height: 100vh;
+  display: flex;
+}
+
+.panneau {
+  flex: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: flex 1500ms cubic-bezier(0.85, -0.2, 0.65, 1.35);
+}
+
+.panneau1 {
+  background-image: url(../img/bg1.jpg);
+}
+.panneau2 {
+  background-image: url(../img/bg2.jpg);
+}
+.panneau3 {
+  background-image: url(../img/bg3.jpg);
+}
+.panneau4 {
+  background-image: url(../img/bg4.jpg);
+}
+.panneau5 {
+  background-image: url(../img/bg5.jpg);
+}
+
+.ouvert {
+  flex: 5;
+}
+
+.portrait {
+  border-radius: 50%;
+  border: 1px black solid;
+  background-color: rgba(255, 255, 255, 0.528);
+  height: 150px;
+  width: 150px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo {
+  object-fit: cover;
+}
+
+.panneau p {
+  color: white;
+  text-transform: uppercase;
+  font-family: "Sedgwick Ave", cursive;
+  font-size: 2em;
+  text-shadow: black 10px 8px 3px;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.panneau > *:first-child {
+  transform: translateY(-400%);
+  transition: transform 1500ms cubic-bezier(0.85, -0.2, 0.65, 1.35);
+}
+
+.panneau > *:last-child {
+  transform: translateY(400%);
+  transition: transform 1500ms cubic-bezier(0.85, -0.2, 0.65, 1.35);
+}
+
+.ouvert > *:first-child {
+  transform: translateY(0%);
+}
+
+.ouvert > *:last-child {
+  transform: translateY(0%);
+}
+
+@media screen and (max-width: 850px) {
+  .panneaux {
+    flex-direction: column;
+  }
+
+  .panneau {
+    flex-direction: row;
+  }
+
+  .portrait {
+    height: 100px;
+    width: 100px;
+  }
+
+  .panneau > *:first-child {
+    transform: translateX(-400%);
+    transition: transform 1500ms cubic-bezier(0.85, -0.2, 0.65, 1.35);
+  }
+
+  .panneau > *:last-child {
+    transform: translateX(400%);
+    transition: transform 1500ms cubic-bezier(0.85, -0.2, 0.65, 1.35);
+  }
+
+  .ouvert > *:first-child {
+    transform: translateX(0%);
+  }
+
+  .ouvert > *:last-child {
+    transform: translateX(0%);
+  }
+}
