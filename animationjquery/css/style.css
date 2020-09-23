@@ -3,6 +3,7 @@
 .panneaux {
   height: 100vh;
   display: flex;
+  padding: 0;
 }
 
 .panneau {
