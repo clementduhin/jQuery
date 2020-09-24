@@ -147,6 +147,30 @@ body {
 .articles {
   text-align: center;
   color: white;
+  overflow: hidden;
+}
+
+.article1 {
+  transform: translateX(-400%);
+  transition: transform 500ms;
+}
+
+.article2 {
+  transform: translateX(400%);
+  transition: transform 500ms;
+}
+.article3 {
+  transform: translateX(-400%);
+  transition: transform 500ms;
+}
+
+.article4 {
+  transform: translateX(400%);
+  transition: transform 500ms;
+}
+
+.apparition {
+  transform: translateX(0%);
 }
 
 /* footer */
