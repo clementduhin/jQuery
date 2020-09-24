@@ -23,7 +23,7 @@ body {
 
 .maNav {
   height: 15vh;
-  background-color: rgba(255, 255, 255, 0.255);
+  background-color: rgb(145, 145, 145);
   color: white;
 }
 
@@ -48,12 +48,18 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  transition: flex 1s ease-in-out;
+  transition: flex 1s ease-in-out, filter 300ms ease-in-out;
   overflow: hidden;
+  filter: grayscale(1);
 }
 
 .panneau-ouvert {
   flex: 4;
+  filter: grayscale(0);
+}
+
+.panneau-survol {
+  filter: grayscale(0);
 }
 
 .panneau1 {
