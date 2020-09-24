@@ -153,21 +153,12 @@ body {
   overflow: hidden;
 }
 
-.article1 {
+.gauche {
   transform: translateX(-400%);
   transition: transform 500ms;
 }
 
-.article2 {
-  transform: translateX(400%);
-  transition: transform 500ms;
-}
-.article3 {
-  transform: translateX(-400%);
-  transition: transform 500ms;
-}
-
-.article4 {
+.droite {
   transform: translateX(400%);
   transition: transform 500ms;
 }
