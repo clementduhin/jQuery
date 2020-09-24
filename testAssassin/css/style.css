@@ -13,8 +13,11 @@ body {
 
 .titleVideoGame {
   font-family: "assassin";
-  font-size: 5em;
   line-height: 0.5em;
+}
+
+.big {
+  font-size: 5em;
 }
 
 .containerNav {
