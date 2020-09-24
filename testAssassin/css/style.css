@@ -3,6 +3,10 @@
   src: url("../font/Assassin$.ttf");
 }
 
+body {
+  background-color: rgba(0, 0, 0, 0.419);
+}
+
 .titleVideoGame {
   font-family: "assassin";
   font-size: 5em;
@@ -149,4 +153,15 @@
 
 .fas {
   font-size: 3em;
+}
+
+@media screen and (max-width: 992px) {
+  .panneaux {
+    flex-direction: column;
+  }
+
+  .bio {
+    font-size: 0.7em;
+    width: 100%;
+  }
 }
