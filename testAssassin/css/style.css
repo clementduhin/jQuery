@@ -66,25 +66,25 @@ body {
 }
 
 .panneau1 {
-  background: url("../img/bg1.jpg") no-repeat;
+  background: url("../img/bg1.png") no-repeat;
   /* background-position: center; */
   background-size: cover;
   background-position: center;
 }
 .panneau2 {
-  background: url("../img/bg2.jpg") no-repeat;
+  background: url("../img/bg2.png") no-repeat;
   /* background-position: center; */
   background-size: cover;
   background-position: center;
 }
 .panneau3 {
-  background: url("../img/bg3.jpg") no-repeat;
+  background: url("../img/bg3.png") no-repeat;
   /* background-position: center; */
   background-size: cover;
   background-position: center;
 }
 .panneau4 {
-  background: url("../img/bg4.jpg") no-repeat;
+  background: url("../img/bg4.png") no-repeat;
   /* background-position: center; */
   background-size: cover;
   background-position: center;
@@ -125,22 +125,22 @@ body {
 }
 
 .portrait1 {
-  background: url(../img/photo1.jpg) no-repeat;
+  background: url(../img/photo1.png) no-repeat;
   background-size: cover;
   background-position: center;
 }
 .portrait2 {
-  background: url(../img/photo2.jpg) no-repeat;
+  background: url(../img/photo2.png) no-repeat;
   background-size: cover;
   background-position: center;
 }
 .portrait3 {
-  background: url(../img/photo3.jpg) no-repeat;
+  background: url(../img/photo3.png) no-repeat;
   background-size: cover;
   background-position: center;
 }
 .portrait4 {
-  background: url(../img/photo4.jpg) no-repeat;
+  background: url(../img/photo4.png) no-repeat;
   background-size: cover;
   background-position: center;
 }
