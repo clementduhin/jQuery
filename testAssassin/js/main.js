@@ -8,7 +8,6 @@ $(".panneau").hover(function () {
 
 $(document).scroll(function () {
   Scroll();
-  // Scroll2();
 });
 
 function Scroll() {
@@ -18,19 +17,5 @@ function Scroll() {
         .children()
         .addClass("apparition");
     }
-  }
-}
-
-function Scroll2() {
-  if ($(document).scrollTop() >= $(".articles2").height() + $(".articles1").height()) {
-    $(".article3").addClass("apparition");
-    $(".article4").addClass("apparition");
-  }
-}
-
-for (let i = 0; i < $(".containerArticles").children().length; i++) {
-  if ($(document).scrollTop() >= $(".articles" + [i]).height()) {
-    $(".article1").addClass("apparition");
-    $(".article2").addClass("apparition");
   }
 }
