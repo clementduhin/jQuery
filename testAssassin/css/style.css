@@ -4,11 +4,8 @@
 }
 
 body {
-  background-image: url("../img/body.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  font-family: "assassin";
+  background-color: black;
 }
 
 .titleVideoGame {
@@ -100,13 +97,13 @@ body {
 
 .panneau-ouvert > *:last-child {
   transform: translateY(0%);
-  height: 50%;
+  height: 70%;
 }
 
 .bio {
   transform: translateY(1000px);
   transition: transform 1s ease-in-out;
-  transition: height 2s ease-in-out;
+  transition: height 1s ease-in-out;
   width: 60%;
   text-align: center;
   height: 0;
@@ -122,6 +119,10 @@ body {
 .bio > *:first-child {
   text-transform: uppercase;
   font-size: 2em;
+}
+
+.textBio {
+  font-size: 1.2em;
 }
 
 .portrait1 {
@@ -147,6 +148,14 @@ body {
 
 /* articles */
 
+.containerArticles {
+  background-image: url("../img/body.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .articles {
   text-align: center;
   color: white;
@@ -163,8 +172,27 @@ body {
   transition: transform 500ms;
 }
 
+.centre {
+  transform: translateY(400%);
+  transition: transform 500ms;
+}
+
 .apparition {
   transform: translateX(0%);
+}
+
+.titleCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoEzio {
+  height: 4em;
+}
+
+.textArticle {
+  font-size: 1.2em;
 }
 
 /* footer */

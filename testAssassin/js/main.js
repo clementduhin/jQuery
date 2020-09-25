@@ -12,7 +12,7 @@ $(document).scroll(function () {
 
 function Scroll() {
   for (let i = 0; i < $(".containerArticles").children().length; i++) {
-    if ($(document).scrollTop() >= (i + 1) * $(".articles").height()) {
+    if ($(document).scrollTop() >= (i + 1) * $(".articles").height() + 300) {
       $(".articles" + [i])
         .children()
         .addClass("apparition");
