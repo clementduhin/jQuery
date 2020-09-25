@@ -149,6 +149,69 @@ body {
 
 /* articles */
 
+.card {
+  background-color: rgba(255, 255, 255, 0.308);
+  padding: 1em;
+  margin: 0.5em;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.left {
+  position: absolute;
+  top: 50%;
+  display: block;
+  left: 10%;
+}
+
+.right {
+  position: absolute;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+}
+
+.monImage {
+  overflow: hidden;
+}
+
+.monImage img {
+  height: 200px;
+  width: 200px;
+  display: none;
+  margin: auto;
+  object-fit: contain;
+}
+
+.monImage .visible {
+  display: block;
+}
+
+.quantiteAchat {
+  height: 10%;
+  display: flex;
+  /* justify-content: center; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.boutonPanier {
+  font-size: 0.5em;
+}
+
+button {
+}
+
+.numberAchat {
+  width: 40%;
+}
+
 .containerArticles {
   background-image: url("../img/body.png");
   background-repeat: no-repeat;
@@ -160,22 +223,21 @@ body {
 .articles {
   text-align: center;
   color: white;
-  overflow: hidden;
 }
 
 .gauche {
   transform: translateX(-400%);
-  transition: transform 500ms;
+  transition: transform 800ms;
 }
 
 .droite {
   transform: translateX(400%);
-  transition: transform 500ms;
+  transition: transform 800ms;
 }
 
 .centre {
   transform: translateY(400%);
-  transition: transform 500ms;
+  transition: transform 800ms;
 }
 
 .apparition {
@@ -184,6 +246,7 @@ body {
 
 .titleCard {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -193,7 +256,7 @@ body {
 }
 
 .textArticle {
-  font-size: 1.2em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* footer */
