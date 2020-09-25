@@ -25,6 +25,7 @@ body {
   height: 15vh;
   background-color: rgb(145, 145, 145);
   color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .logo {
@@ -220,5 +221,13 @@ body {
   .bio {
     font-size: 0.7em;
     width: 100%;
+  }
+
+  .articles {
+    height: 100vh;
+  }
+
+  .textArticle {
+    font-size: 0.9em;
   }
 }

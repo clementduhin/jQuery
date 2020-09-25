@@ -1,0 +1,52 @@
+.header {
+  height: 40vh;
+  width: 100vw;
+  background-image: url(../../testAssassin/img/bg1.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.monImage {
+  width: 500px;
+  height: 300px;
+}
+
+.monImage img {
+  display: none;
+  width: 500px;
+  height: 300px;
+}
+
+img.visible {
+  display: block;
+}
+
+.slider {
+  position: relative;
+}
+
+.droite {
+  position: absolute;
+  top: 10%;
+  right: 28%;
+}
+
+.droite:hover {
+  transform: scale(1.2);
+}
+
+.droite:active {
+  transform: scale(0.9);
+}
+
+.gauche {
+  position: absolute;
+  top: 10%;
+  left: -1%;
+  transition: 300ms;
+}
+
+.gauche:hover {
+  transform: scale(1.2);
+}
