@@ -168,6 +168,16 @@ body {
   top: 50%;
   display: block;
   left: 10%;
+  text-shadow: 3px 3px 5px black;
+}
+
+.left:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.left:active {
+  transform: scale(0.9);
 }
 
 .right {
@@ -176,10 +186,20 @@ body {
   position: absolute;
   top: 50%;
   right: 10%;
+  text-shadow: 3px 3px 5px black;
+}
+
+.right:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.right:active {
+  transform: scale(0.9);
 }
 
 .monImage {
-  overflow: hidden;
+  padding-top: 1em;
 }
 
 .monImage img {
@@ -194,6 +214,16 @@ body {
   display: block;
 }
 
+.contenuArticle {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1em;
+}
+
+.price {
+  font-size: 1.3em;
+}
+
 .quantiteAchat {
   height: 10%;
   display: flex;
@@ -205,11 +235,21 @@ body {
   font-size: 0.5em;
 }
 
-button {
+.boutonPlus {
+  /* height: 90%; */
+}
+.ajout {
+  display: flex;
+  justify-content: center;
 }
 
 .numberAchat {
   width: 40%;
+  height: 100%;
+}
+
+.btn-dark {
+  background-color: black;
 }
 
 .containerArticles {
@@ -218,6 +258,7 @@ button {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  overflow: hidden;
 }
 
 .articles {
@@ -286,9 +327,9 @@ button {
     width: 100%;
   }
 
-  .articles {
+  /* .articles {
     height: 100vh;
-  }
+  } */
 
   .textArticle {
     font-size: 0.9em;

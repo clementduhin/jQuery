@@ -35,7 +35,7 @@ $(".right").click(function () {
 });
 
 $(".left").click(function () {
-  var active = $(".visible");
+  var active = $(this).closest("div").children().find(".visible");
   var imagePrev = active.prev();
 
   if (imagePrev.length == 0) {
@@ -44,5 +44,23 @@ $(".left").click(function () {
   } else {
     active.removeClass("visible");
     imagePrev.addClass("visible");
+  }
+});
+
+for (var i = 0; i < $(".numberAchat").length; i++) {
+  $(".numberAchat")[i].value = 1;
+}
+
+$(".boutonPlus").click(function () {
+  $(this).closest("div").find("input")[0].value++;
+  $(this).closest("div").find(".boutonMoins").css("background-color", "black");
+});
+
+$(".boutonMoins").click(function () {
+  if ($(this).closest("div").find("input")[0].value <= 1) {
+    $(this).css("background-color", "grey");
+    $(this).closest("div").find("input")[0].value = 0;
+  } else {
+    $(this).closest("div").find("input")[0].value--;
   }
 });
