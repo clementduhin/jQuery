@@ -1,0 +1,16 @@
+/* footer */
+
+.footer {
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fab {
+  font-size: 3em;
+}
+
+.fas {
+  font-size: 3em;
+}

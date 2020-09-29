@@ -1,18 +1,23 @@
 export function ajoutInput() {
-  for (var i = 0; i < $(".numberAchat").length; i++) {
-    $(".numberAchat")[i].value = 1;
+  for (var i = 0; i < $(".nombreAchat").length; i++) {
+    var valInput = $(".nombreAchat").val();
+    valInput = 1;
+    $(".nombreAchat").val(valInput);
   }
 
   $(".boutonPlus").click(function () {
-    $(this).closest("div").find("input")[0].value++;
+    var valInput = $(this).parent().find(".nombreAchat").val();
+    var valInputInt = parseInt(valInput);
+    valInputInt++;
+    $(this).parent().find(".nombreAchat").val(valInputInt);
   });
 
   $(".boutonMoins").click(function () {
-    if ($(this).closest("div").find("input")[0].value <= 1) {
-      $(this).css("background-color", "grey");
-      $(this).closest("div").find("input")[0].value = 0;
-    } else {
-      $(this).closest("div").find("input")[0].value--;
+    var valInput = $(this).parent().find(".nombreAchat").val();
+    var valInputInt = parseInt(valInput);
+    if (valInputInt > 1) {
+      valInputInt--;
+      $(this).parent().find(".nombreAchat").val(valInputInt);
     }
   });
 }

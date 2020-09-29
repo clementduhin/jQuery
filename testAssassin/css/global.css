@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "assassin";
+  src: url("../font/Assassin$.ttf");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "assassin";
+  background-color: black;
+}
+
+.titleVideoGame {
+  font-family: "assassin";
+  line-height: 0.5em;
+}
+
+.big {
+  font-size: 5em;
+}

@@ -1,0 +1,14 @@
+@media screen and (max-width: 992px) {
+  .panneaux {
+    flex-direction: column;
+  }
+
+  .bio {
+    font-size: 0.7em;
+    width: 100%;
+  }
+
+  .textArticle {
+    font-size: 0.9em;
+  }
+}

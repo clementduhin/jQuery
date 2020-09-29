@@ -1,0 +1,20 @@
+/* Panier */
+
+.voirPanier {
+  font-size: 2em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: absolute;
+  position: fixed;
+  top: 30%;
+  left: 1%;
+}
+
+.panier {
+  position: fixed;
+  top: 40%;
+  left: -300%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: left 300ms;
+  display: flex;
+  justify-content: space-between;
+}

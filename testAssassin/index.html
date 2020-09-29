@@ -31,14 +31,32 @@
               <a class="nav-link" href="#">Home </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#produits">produits</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="#panier">Commander</a>
             </li>
           </ul>
         </div>
       </nav>
+    </div>
+
+    <!-- le panier -->
+
+    <button class="btn voirPanier" id="panier">Voir mon panier</button>
+    <div class="panier">
+      <table class="tableauPanier table table-dark table-striped">
+        <thead>
+          <tr>
+            <th>Produit</th>
+            <th>Prix</th>
+            <th>quantité</th>
+            <th>sous-total</th>
+            <th><button class="fermer">X</button></th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
     </div>
 
     <!-- panneaux -->
@@ -106,7 +124,7 @@
 
     <!-- articles lorem -->
 
-    <div class="container containerArticles py-5">
+    <div class="container containerArticles py-5" id="produits">
       <div class="row d-flex justify-content-around articles articles0">
         <div class="col-5 col-lg-4 gauche card">
           <div class="titleCard">
@@ -121,8 +139,8 @@
           </div>
 
           <div class="slider">
-            <i class="fas left fa-angle-left"></i>
-            <i class="fas right fa-angle-right"></i>
+            <i class="fas flecheGauche fa-angle-left"></i>
+            <i class="fas flecheDroite fa-angle-right"></i>
             <div class="monImage">
               <img class="visible" src="img/figurineEzio1.jpg" alt="" />
               <img src="img/figurineEzio2.jpg" alt="" />
@@ -130,18 +148,18 @@
               <img src="img/figurineEzio4.jpg" alt="" />
             </div>
           </div>
-          <div class="contenuArticle">
+          <div class="titrePrixArticle">
             <p class="textArticle">Figurine Ezio</p>
-            <p class="price">25 €</p>
+            <p class="prix">25 €</p>
           </div>
-          <div class="quantiteAchat mb-2">
-            <div class="ajout">
+          <div class="plusEtMoins mb-2">
+            <div class="compteur">
               <button type="button" class="btn btn-dark boutonMoins">-</button>
-              <input class="numberAchat" type="text" />
+              <input class="nombreAchat" size="2" type="number" />
               <button type="button" class="btn btn-dark boutonPlus">+</button>
             </div>
             <div>
-              <button type="button" class="btn btn-dark boutonPanier">
+              <button type="button" class="btn btn-dark boutonAjoutPanier">
                 <i class="fas fa-shopping-basket"></i>
               </button>
             </div>
@@ -160,103 +178,224 @@
           </div>
 
           <div class="slider">
-            <i class="fas left fa-angle-left"></i>
-            <i class="fas right fa-angle-right"></i>
+            <i class="fas flecheGauche fa-angle-left"></i>
+            <i class="fas flecheDroite fa-angle-right"></i>
             <div class="monImage">
               <img class="visible" src="img/maillotOdyssey1.jpg" alt="" />
               <img src="img/maillotOdyssey2.jpg" alt="" />
               <img src="img/maillotOdyssey3.jpg" alt="" />
             </div>
           </div>
-          <div class="contenuArticle">
+          <div class="titrePrixArticle">
             <p class="textArticle">Tee-shirt odyssey</p>
-            <p class="price">20 €</p>
+            <p class="prix">20 €</p>
           </div>
-          <div class="quantiteAchat mb-2">
-            <div class="ajout">
+          <div class="plusEtMoins mb-2">
+            <div class="compteur">
               <button type="button" class="btn btn-dark boutonMoins">-</button>
-              <input class="numberAchat" type="text" />
+              <input class="nombreAchat" size="2" type="number" />
               <button type="button" class="btn btn-dark boutonPlus">+</button>
             </div>
             <div>
-              <button type="button" class="btn btn-dark boutonPanier">
+              <button type="button" class="btn btn-dark boutonAjoutPanier">
                 <i class="fas fa-shopping-basket"></i>
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div class="row d-flex justify-content-around articles articles1 py-4">
-        <div class="col-12 col-lg-4 gauche">
-          <h3 class="titleVideoGame">
-            Assassin$ <br />
-            creed <br />
-            unity
-          </h3>
-          <p class="textArticle">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsa minus dolorem et repudiandae itaque quia quam at repellendus eos,
-            nesciunt recusandae facere iusto delectus explicabo non velit iste beatae excepturi soluta voluptatum voluptatibus sapiente enim mollitia?
-            Aut quasi adipisci quam, obcaecati illum atque autem voluptate, pariatur veritatis repudiandae architecto. Deleniti amet aliquam possimus
-            officia nesciunt praesentium labore quas nostrum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem cum eaque odio
-            dolorum quasi, dolorem, incidunt fugiat non, vel deleniti reiciendis laboriosam consequatur dolor magnam in eius quaerat quibusdam. Animi.
-          </p>
+
+      <div class="row d-flex justify-content-around articles articles1">
+        <div class="col-5 col-lg-3 gauche card">
+          <div class="titleCard">
+            <div>
+              <h3 class="titleVideoGame">
+                Assassin$ <br />
+                creed <br />
+                Unity
+              </h3>
+            </div>
+            <div><img class="logoEzio" src="img/logoUnity.png" alt="" /></div>
+          </div>
+
+          <div class="slider">
+            <i class="fas flecheGauche fa-angle-left"></i>
+            <i class="fas flecheDroite fa-angle-right"></i>
+            <div class="monImage">
+              <img class="visible" src="img/livreUnity.jpg" alt="" />
+              <img src="img/livreUnityBack.jpg" alt="" />
+            </div>
+          </div>
+          <div class="titrePrixArticle">
+            <p class="textArticle">Roman Unity</p>
+            <p class="prix">8 €</p>
+          </div>
+          <div class="plusEtMoins mb-2">
+            <div class="compteur">
+              <button type="button" class="btn btn-dark boutonMoins">-</button>
+              <input class="nombreAchat" size="2" type="number" />
+              <button type="button" class="btn btn-dark boutonPlus">+</button>
+            </div>
+            <div>
+              <button type="button" class="btn btn-dark boutonAjoutPanier">
+                <i class="fas fa-shopping-basket"></i>
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="col-12 col-lg-4 centre">
-          <h3 class="titleVideoGame">
-            Assassin$ <br />
-            creed <br />
-            valhalla
-          </h3>
-          <p class="textArticle">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsa minus dolorem et repudiandae itaque quia quam at repellendus eos,
-            nesciunt recusandae facere iusto delectus explicabo non velit iste beatae excepturi soluta voluptatum voluptatibus sapiente enim mollitia?
-            Aut quasi adipisci quam, obcaecati illum atque autem voluptate, pariatur veritatis repudiandae architecto. Deleniti amet aliquam possimus
-            officia nesciunt praesentium labore quas nostrum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, aut sunt! Maxime quam
-            dolore nihil illo placeat officiis dolores labore eum optio! Iusto laudantium voluptatem tempore facere, quae fugiat voluptates.
-          </p>
+        <div class="col-5 col-lg-3 centre card">
+          <div class="titleCard">
+            <div>
+              <h3 class="titleVideoGame">
+                Assassin$ <br />
+                creed <br />
+                Valhalla
+              </h3>
+            </div>
+            <div><img class="logoEzio" src="img/logoValhalla.png" alt="" /></div>
+          </div>
+
+          <div class="slider">
+            <i class="fas flecheGauche fa-angle-left"></i>
+            <i class="fas flecheDroite fa-angle-right"></i>
+            <div class="monImage">
+              <img class="visible" src="img/jaquetteValhalla.jpg" alt="" />
+              <img src="img/goldValhalla.jpg" alt="" />
+            </div>
+          </div>
+          <div class="titrePrixArticle">
+            <p class="textArticle">
+              Assassin's creed <br />
+              Valhalla gold
+            </p>
+            <p class="prix">99 €</p>
+          </div>
+          <div class="plusEtMoins mb-2">
+            <div class="compteur">
+              <button type="button" class="btn btn-dark boutonMoins">-</button>
+              <input class="nombreAchat" size="2" type="number" />
+              <button type="button" class="btn btn-dark boutonPlus">+</button>
+            </div>
+            <div>
+              <button type="button" class="btn btn-dark boutonAjoutPanier">
+                <i class="fas fa-shopping-basket"></i>
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="col-12 col-lg-4 droite">
-          <h3 class="titleVideoGame">
-            Assassin$ <br />
-            creed <br />
-            valhalla
-          </h3>
-          <p class="textArticle">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsa minus dolorem et repudiandae itaque quia quam at repellendus eos,
-            nesciunt recusandae facere iusto delectus explicabo non velit iste beatae excepturi soluta voluptatum voluptatibus sapiente enim mollitia?
-            Aut quasi adipisci quam, obcaecati illum atque autem voluptate, pariatur veritatis repudiandae architecto. Deleniti amet aliquam possimus
-            officia nesciunt praesentium labore quas nostrum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, numquam! Distinctio
-            quae provident consequuntur modi aliquam. Consequatur minus perspiciatis dignissimos officiis. Voluptatum pariatur at iure dolorum
-            voluptatem eos praesentium perferendis.
-          </p>
+        <div class="col-5 col-lg-3 droite card">
+          <div class="titleCard">
+            <div>
+              <h3 class="titleVideoGame">
+                Assassin$ <br />
+                creed <br />
+              </h3>
+            </div>
+            <div><img class="logoEzio" src="img/logo.png" alt="" /></div>
+          </div>
+
+          <div class="slider">
+            <i class="fas flecheGauche fa-angle-left"></i>
+            <i class="fas flecheDroite fa-angle-right"></i>
+            <div class="monImage">
+              <img class="visible" src="img/polo1.jpg" alt="" />
+              <img src="img/polo2.jpg" alt="" />
+              <img src="img/polo3.jpg" alt="" />
+            </div>
+          </div>
+          <div class="titrePrixArticle">
+            <p class="textArticle">Tee-shirt odyssey</p>
+            <p class="prix">15 €</p>
+          </div>
+          <div class="plusEtMoins mb-2">
+            <div class="compteur">
+              <button type="button" class="btn btn-dark boutonMoins">-</button>
+              <input class="nombreAchat" size="2" type="number" />
+              <button type="button" class="btn btn-dark boutonPlus">+</button>
+            </div>
+            <div>
+              <button type="button" class="btn btn-dark boutonAjoutPanier">
+                <i class="fas fa-shopping-basket"></i>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row d-flex justify-content-around articles articles2">
-        <div class="col-12 col-lg-5 gauche">
-          <h3 class="titleVideoGame">
-            Assassin$ <br />
-            creed <br />
-            unity
-          </h3>
-          <p class="textArticle">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsa minus dolorem et repudiandae itaque quia quam at repellendus eos,
-            nesciunt recusandae facere iusto delectus explicabo non velit iste beatae excepturi soluta voluptatum voluptatibus sapiente enim mollitia?
-            Aut quasi adipisci quam, obcaecati illum atque autem voluptate, pariatur veritatis repudiandae architecto. Deleniti amet aliquam possimus
-            officia nesciunt praesentium labore quas nostrum.
-          </p>
+        <div class="col-5 col-lg-4 gauche card">
+          <div class="titleCard">
+            <div>
+              <h3 class="titleVideoGame">
+                Assassin$ <br />
+                creed <br />
+                the ezio collection
+              </h3>
+            </div>
+            <div><img class="logoEzio" src="img/logoEzio.svg" alt="" /></div>
+          </div>
+
+          <div class="slider">
+            <i class="fas flecheGauche fa-angle-left"></i>
+            <i class="fas flecheDroite fa-angle-right"></i>
+            <div class="monImage">
+              <img class="visible" src="img/popEzio1.jpg" alt="" />
+              <img src="img/popEzio2.jpg" alt="" />
+              <img src="img/popEzio3.jpg" alt="" />
+              <img src="img/popEzio4.jpg" alt="" />
+            </div>
+          </div>
+          <div class="titrePrixArticle">
+            <p class="textArticle">Pop Ezio</p>
+            <p class="prix">10 €</p>
+          </div>
+          <div class="plusEtMoins mb-2">
+            <div class="compteur">
+              <button type="button" class="btn btn-dark boutonMoins">-</button>
+              <input class="nombreAchat" size="2" type="number" />
+              <button type="button" class="btn btn-dark boutonPlus">+</button>
+            </div>
+            <div>
+              <button type="button" class="btn btn-dark boutonAjoutPanier">
+                <i class="fas fa-shopping-basket"></i>
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="col-12 col-lg-5 droite">
-          <h3 class="titleVideoGame">
-            Assassin$ <br />
-            creed <br />
-            valhalla
-          </h3>
-          <p class="textArticle">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsa minus dolorem et repudiandae itaque quia quam at repellendus eos,
-            nesciunt recusandae facere iusto delectus explicabo non velit iste beatae excepturi soluta voluptatum voluptatibus sapiente enim mollitia?
-            Aut quasi adipisci quam, obcaecati illum atque autem voluptate, pariatur veritatis repudiandae architecto. Deleniti amet aliquam possimus
-            officia nesciunt praesentium labore quas nostrum.
-          </p>
+        <div class="col-5 col-lg-4 droite card">
+          <div class="titleCard">
+            <div>
+              <h3 class="titleVideoGame">
+                Assassin$ <br />
+                creed <br />
+              </h3>
+            </div>
+            <div><img src="img/logo.png" class="logoEzio" alt="" /></div>
+          </div>
+
+          <div class="slider">
+            <i class="fas flecheGauche fa-angle-left"></i>
+            <i class="fas flecheDroite fa-angle-right"></i>
+            <div class="monImage">
+              <img class="visible" src="img/porteCle1.jpg" alt="" />
+              <img src="img/porteCle2.jpg" alt="" />
+            </div>
+          </div>
+          <div class="titrePrixArticle">
+            <p class="textArticle">Tee-shirt odyssey</p>
+            <p class="prix">13 €</p>
+          </div>
+          <div class="plusEtMoins mb-2">
+            <div class="compteur">
+              <button type="button" class="btn btn-dark boutonMoins">-</button>
+              <input class="nombreAchat" size="2" type="number" />
+              <button type="button" class="btn btn-dark boutonPlus">+</button>
+            </div>
+            <div>
+              <button type="button" class="btn btn-dark boutonAjoutPanier">
+                <i class="fas fa-shopping-basket"></i>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

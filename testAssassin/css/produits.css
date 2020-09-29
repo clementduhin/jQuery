@@ -1,0 +1,157 @@
+/* articles/produits */
+
+.containerArticles {
+  background-image: url("../img/body.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.308);
+  padding: 1em;
+  margin: 0.5em;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.flecheGauche {
+  position: absolute;
+  top: 50%;
+  display: block;
+  left: 10%;
+  text-shadow: 3px 3px 5px black;
+}
+
+.flecheGauche:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.flecheGauche:active {
+  transform: scale(0.9);
+}
+
+.flecheDroite {
+  position: absolute;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  text-shadow: 3px 3px 5px black;
+}
+
+.flecheDroite:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.flecheDroite:active {
+  transform: scale(0.9);
+}
+
+.monImage {
+  padding-top: 1em;
+}
+
+.monImage img {
+  height: 200px;
+  width: 200px;
+  display: none;
+  margin: auto;
+  object-fit: contain;
+}
+
+.monImage .visible {
+  display: block;
+}
+
+.titrePrixArticle {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1em;
+}
+
+.prix {
+  font-size: 1.3em;
+}
+
+.plusEtMoins {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.boutonAjoutPanier {
+  font-size: 0.5em;
+}
+
+.compteur {
+  display: flex;
+  justify-content: center;
+}
+
+.nombreAchat {
+  width: 40%;
+  height: 100%;
+  -moz-appearance: textfield;
+  text-align: center;
+}
+
+.nombreAchat::-webkit-outer-spin-button,
+.nombreAchat::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btn-dark {
+  background-color: black;
+}
+
+.articles {
+  text-align: center;
+  color: white;
+}
+
+.gauche {
+  transform: translateX(-400%);
+  transition: transform 800ms;
+}
+
+.droite {
+  transform: translateX(400%);
+  transition: transform 800ms;
+}
+
+.centre {
+  transform: translateY(400%);
+  transition: transform 800ms;
+}
+
+.apparition {
+  transform: translateX(0%);
+}
+
+.titleCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoEzio {
+  height: 4em;
+}
+
+.textArticle {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}

@@ -1,5 +1,5 @@
 export function slider() {
-  $(".right").click(function () {
+  $(".flecheDroite").click(function () {
     var active = $(this).closest("div").find(".visible");
     var imageNext = active.next();
     console.log(imageNext);
@@ -13,7 +13,7 @@ export function slider() {
     }
   });
 
-  $(".left").click(function () {
+  $(".flecheGauche").click(function () {
     var active = $(this).closest("div").children().find(".visible");
     var imagePrev = active.prev();
 
