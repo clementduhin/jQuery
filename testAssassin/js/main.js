@@ -11,34 +11,56 @@ $(document).ready(function () {
   slider();
   panneaux();
   ajoutInput();
-  panier();
 });
 
 $(".voirPanier").click(function () {
-  $(".panier").css("left", "1%");
+  $(".panier").toggleClass("panierOuvert");
 });
 
 $(".fermer").click(function () {
-  $(".panier").css("left", "-300%");
+  $(".panier").removeClass("panierOuvert");
 });
 
 var tableauProduits = [
-  ["Figurine Ezio", "25 €"],
-  ["Tee-shirt Odissey", "20 €"],
-  ["Roman unity", "8 €"],
-  ["Assassin's creed valhalla gold edition", "99 €"],
-  ["Polo assassin", "15 €"],
-  ["Pop Ezio", "10 €"],
-  ["Porte clé assassin", "13 €"],
+  ["Figurine Ezio", "25"],
+  ["Tee-shirt Odissey", "20"],
+  ["Roman unity", "8"],
+  ["Assassin's creed valhalla gold edition", "99"],
+  ["Polo assassin", "15"],
+  ["Pop Ezio", "10"],
+  ["Porte clé assassin", "13"],
 ];
 
-function panier() {
-  $(".boutonAjoutPanier").click(function () {
-    var nom = $(this),
-      prixUnitaire = 3,
-      quantite = 2,
-      sousTotal = prixUnitaire * quantite;
+var panier = [];
+
+$(".boutonAjoutPanier").click(function () {
+  panier = [];
+  var index = $(this).attr("id");
+  var nom = tableauProduits[index][0];
+  var prixUnitaire = tableauProduits[index][1];
+  var quantite = $(this).parent().prev().find(".nombreAchat").val();
+  var quantiteInt = parseInt(quantite);
+  var sousTotal = quantiteInt * prixUnitaire;
+
+  var produitAAjouter = [nom, prixUnitaire, quantiteInt, sousTotal];
+
+  console.log(panier);
+
+  var premierAchat = true;
+
+  if (premierAchat) {
+    panier.push(produitAAjouter);
+  }
+  remplirPanier(panier);
+});
+
+function remplirPanier(lePanier) {
+  for (let i = 0; i < lePanier.length; i++) {
+    var nom1 = lePanier[i][0];
+    var prixUnitaire1 = lePanier[i][1];
+    var quantite1 = lePanier[i][2];
+    var sousTotal1 = lePanier[i][3];
     document.getElementById("tableBody").innerHTML +=
-      "<tr><td>" + nom + "</td><td>" + prixUnitaire + "</td><td>" + quantite + "</td><td>" + sousTotal + "</td></tr>";
-  });
+      "<tr><td>" + nom1 + "</td><td>" + prixUnitaire1 + "</td><td>" + quantite1 + "</td><td>" + sousTotal1 + "</td></tr>";
+  }
 }

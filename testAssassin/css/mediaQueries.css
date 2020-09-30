@@ -11,4 +11,24 @@
   .textArticle {
     font-size: 0.9em;
   }
+
+  .containerPanneaux {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .panier {
+    width: 100%;
+  }
+
+  .noPadding {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .monImage img {
+    width: 150px;
+  }
 }

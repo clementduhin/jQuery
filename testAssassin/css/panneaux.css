@@ -67,8 +67,7 @@
 
 .bio {
   transform: translateY(1000px);
-  transition: transform 1s ease-in-out;
-  transition: height 1s ease-in-out;
+  transition: transform 1.5s ease-in-out, height 1s;
   width: 60%;
   text-align: center;
   height: 0;
