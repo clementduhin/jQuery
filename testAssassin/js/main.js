@@ -53,10 +53,10 @@ $(".boutonAjoutPanier").click(function () {
       var nouveauSousTotal = nouvelleQuantite * prixUnitaire;
       premierAchat = false;
       produitAAjouter = [nom, prixUnitaire, nouvelleQuantite, nouveauSousTotal];
+      panierEnCours[2] = nouvelleQuantite;
+      panierEnCours[3] = nouveauSousTotal;
+      panier[i] = panierEnCours;
     }
-    panierEnCours[2] = nouvelleQuantite;
-    panierEnCours[3] = nouveauSousTotal;
-    panier[i] = panierEnCours;
   }
 
   if (premierAchat == true) {
