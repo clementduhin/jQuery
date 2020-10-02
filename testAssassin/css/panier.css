@@ -29,3 +29,9 @@
 .panierOuvert {
   right: 1%;
 }
+
+.fermerDroite {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
