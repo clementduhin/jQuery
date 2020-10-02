@@ -22,19 +22,18 @@ $(".fermer").click(function () {
 });
 
 var tableauProduits = [
-  ["Figurine Ezio", "25"],
-  ["Tee-shirt Odissey", "20"],
-  ["Roman unity", "8"],
-  ["Assassin's creed valhalla gold edition", "99"],
-  ["Polo assassin", "15"],
-  ["Pop Ezio", "10"],
-  ["Porte clé assassin", "13"],
+  ["Figurine Ezio", 25],
+  ["Tee-shirt Odissey", 20],
+  ["Roman unity", 8],
+  ["Assassin's creed valhalla gold edition", 99],
+  ["Polo assassin", 15],
+  ["Pop Ezio", 10],
+  ["Porte clé assassin", 13],
 ];
 
 var panier = [];
 
 $(".boutonAjoutPanier").click(function () {
-  panier = [];
   var index = $(this).attr("id");
   var nom = tableauProduits[index][0];
   var prixUnitaire = tableauProduits[index][1];
@@ -44,13 +43,27 @@ $(".boutonAjoutPanier").click(function () {
 
   var produitAAjouter = [nom, prixUnitaire, quantiteInt, sousTotal];
 
-  console.log(panier);
-
   var premierAchat = true;
 
-  if (premierAchat) {
+  for (var i = 0; i < panier.length; i++) {
+    var panierEnCours = panier[i];
+    if (panierEnCours.includes(nom) === true) {
+      var ancienneQuantite = panierEnCours[2];
+      var nouvelleQuantite = ancienneQuantite + quantiteInt;
+      var nouveauSousTotal = nouvelleQuantite * prixUnitaire;
+      premierAchat = false;
+      produitAAjouter = [nom, prixUnitaire, nouvelleQuantite, nouveauSousTotal];
+    }
+    panierEnCours[2] = nouvelleQuantite;
+    panierEnCours[3] = nouveauSousTotal;
+    panier[i] = panierEnCours;
+  }
+
+  if (premierAchat == true) {
     panier.push(produitAAjouter);
   }
+
+  document.getElementById("tableBody").innerHTML = "";
   remplirPanier(panier);
 });
 
